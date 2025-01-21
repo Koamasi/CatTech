@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.CatPlasma.ct;
 
 import java.io.File;
 
