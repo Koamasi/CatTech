@@ -1,4 +1,4 @@
-package com.CatPlasma.ct;
+package com.CatPlasma.CatTech;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

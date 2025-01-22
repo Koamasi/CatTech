@@ -1,4 +1,4 @@
-package com.CatPlasma.ct;
+package com.CatPlasma.CatTech;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,13 +10,26 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = CatTech.MODID, version = Tags.VERSION, name = "CatTech", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(
+    modid = CatTech.MODID,
+    version = Tags.VERSION,
+    name = "CatTech",
+    dependencies = "required-before:gregtech;",
+    acceptedMinecraftVersions = "[1.7.10]"
+)
 public class CatTech {
 
-    public static final String MODID = "ct";
+    public static final String MODID = "CatTech";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
-    @SidedProxy(clientSide = "com.CatPlasma.ct.ClientProxy", serverSide = "com.CatPlasma.ct.CommonProxy")
+    @Mod.Instance
+    // Convenient for other classes to call
+    public static CatTech instance;
+
+    @SidedProxy(
+        clientSide = "com.CatPlasma.CatTech.ClientProxy",
+        serverSide = "com.CatPlasma.CatTech.CommonProxy"
+    )
     public static CommonProxy proxy;
 
     @Mod.EventHandler

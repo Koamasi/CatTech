@@ -1,4 +1,4 @@
-package com.CatPlasma.ct;
+package com.CatPlasma.CatTech;
 
 import java.io.File;
 
